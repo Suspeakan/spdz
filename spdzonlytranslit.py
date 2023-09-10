@@ -18,7 +18,7 @@ latin_to_spdz = {
     'K': 'К', 'k': 'к',
     'C': 'Ц', 'c': 'ц',
     '´D': 'Җ', '´d': 'җ',
-    '´T': 'Θ', '´t': 'θ',
+    '´T': 'Ѳ', '´t': 'ѳ',
     'D': 'Д', 'd': 'д',
     'S': 'С', 's': 'с',
     'Z': 'З', 'z': 'з',
@@ -82,25 +82,6 @@ def select_transliteration():
                 print("   .. (input 'q' to show map)")
                 conv_gate_cyrillic_2()
             
-        elif choice == 'ebbing':
-            print("   ..")
-            print("Under sulfur skies, the drunken tides")
-            print("Will pull us in")
-            print("Unfolding, but not breathing")
-            print("Upon your breast, I'll rest my head")
-            print("In laziness")
-            print("Gestating, just dreaming")
-            print("But not breathing")
-            print("My swallowed tongue, my wounded dove")
-            print("Your eyes are mine")
-            print("Occluding, we're sinking")
-            print("Just drifting, not breathing")
-            print("Releasing")
-            print("In shallow ponds, within your palm")
-            print("There lies a mind")
-            print("Dissolving, not seeing")
-            print("Unfolding, not thinking")
-            print("Releasing, not breathing")
 
         elif choice == '0':
             break
