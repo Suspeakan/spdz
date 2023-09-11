@@ -1,0 +1,178 @@
+<div><a style="font-family: Arial, sans-serif;" href="index.html">Home</a></div>
+<br>
+<br>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 2.54cm;
+            margin-bottom: 2.54cm;
+            margin-left: 2.54cm; 
+            margin-right: 2.54cm;
+            font-size: 14px;
+        }
+        .centered-text {
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+        .underline {
+    text-align: center;
+    border-bottom: 1px solid black;
+        }
+        .he {
+            font-size: 21px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .subhe {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 21px;
+            font-style: italic;
+            text-align: center;
+        }
+        .entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .label {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .content {
+            flex-grow: 2;
+            text-align: right;
+        }
+        
+        p {
+            text-indent: 3em;
+        }
+        .sec {
+            font-weight: bold;
+            font-size: 17px;
+            text-indent: 3em;
+            flex-grow: 1;
+        } 
+        .sec2 {
+            font-size: 17px;
+            font-weight: lighter;
+            text-align: right;
+            text-indent: 3em;
+            flex-grow: 2;
+        }
+        .code-block {
+            background-color: #f4f4f4; /* Light gray background color */
+            padding: 10px; /* Add padding for spacing around the code */
+            border: 1px solid #ddd; /* Optional: Add a border */
+        }
+
+        .code {
+            display: block;
+            white-space: pre-wrap;
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+
+<div class="code-block",>
+    <code class="code">
+        latin_to_spdz = {
+            'A': 'А', 'a': 'а',
+            'I': 'И', 'i': 'и',
+            'Í': 'Ы', 'í': 'ы',
+            'U': 'У', 'u': 'у',
+            'E': 'Е', 'e': 'е',
+            'À': 'Э', 'à': 'э',
+            'Ë': 'Ё', 'ë': 'ё',
+            'O': 'О', 'o': 'о',
+            'Ö': 'О̄', 'ö': 'о̄',
+            'J': 'Й', 'j': 'й',
+            'L': 'Л', 'l': 'л',
+            'R': 'Р', 'r': 'р',
+            'M': 'М', 'm': 'м',
+            'N': 'Н', 'n': 'н',
+            'P': 'П', 'p': 'п',
+            'T': 'Т', 't': 'т',
+            'K': 'К', 'k': 'к',
+            'C': 'Ц', 'c': 'ц',
+            '´D': 'Җ', '´d': 'җ',
+            '´T': 'Ѳ', '´t': 'ѳ',
+            'D': 'Д', 'd': 'д',
+            'S': 'С', 's': 'с',
+            'Z': 'З', 'z': 'з',
+            '´S': 'Ш', '´s': 'ш',
+            '`Z': 'Ж', '`z': 'ж',
+            '`S': 'Щ', '`s': 'щ',
+            '´Z': 'З́', '´z': 'з́',
+            'X': 'Х', 'x': 'х',
+            'H': 'Ҳ', 'h': 'ҳ',
+            '´J': 'Я', '´j': 'я',
+            '`J': 'Ю', '`j': 'ю',
+            'Ý': 'Ү', 'ý': 'ү',
+            'G': 'Г', 'g': 'г'
+        }
+        
+        
+        def convert_to_cyrillic2(input_text):
+            output_text = ""
+            buffer = ""
+        
+            for char in input_text:
+                if char == ' ':  
+                    output_text += buffer + ' '  
+                    buffer = ""  
+                else:
+                    buffer += char
+                    if buffer in latin_to_spdz:
+                        output_text += latin_to_spdz[buffer]
+                        buffer = ""
+        
+            output_text += buffer
+        
+            return output_text
+                
+        def conv_gate_cyrillic_2():
+            while True:
+                latin_input = input("   .. LATIN     // : ")
+                cyrillic_output2 = convert_to_cyrillic2(latin_input)
+                print("   .. CYRILLIC  // :", cyrillic_output2)
+        
+                if latin_input == '0':
+                    return
+                elif latin_input == 'q':
+                    print(latin_to_spdz)
+        
+        def select_transliteration():
+            while True:
+                print(" ")
+                print("// ...")
+                print("   SELECT TRANSLITERATION")
+                print("// ... ")
+                print(" ")
+                print("   .. (1) ПОХОД ПАРХА СЫПЕҖ")
+                print("          POXOD PARXA SÉPEDZ")
+                print("          (Latin to Cyrillic)")
+                print(" ")
+        
+                choice = input("   // : ")
+                    
+                if choice == '1':
+                        print("   .. (input 'q' to show map)")
+                        conv_gate_cyrillic_2()
+                    
+        
+                elif choice == '0':
+                    break
+        
+        if __name__ == "__main__":
+            select_transliteration()
+    </code>
+</div>
+
+<body>
+    <p>Run as a python program, press 'q' for the key.</p>
+</body>
