@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conlang Transliteration</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    textarea {
+        width: 100%;
+        height: 100px;
+        margin: 10px 0;
+    }
+    
+    button {
+        display: block;
+        margin: 10px auto;
+    }
+    
+    #cyrillic-output {
+        font-weight: bold;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1>Conlang Transliteration</h1>
+    <textarea id="latin-input" placeholder="Enter Latin text"></textarea>
+    <button onclick="convertToCyrillic()">Convert</button>
+    <div id="cyrillic-output"></div>
+    <script src="script.js"></script>
+</body>
+</html>
