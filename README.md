@@ -27,4 +27,12 @@ Each participle will be marked with a subscript letter, from A-Z, and for more t
      ef (136)...
      zz (702)
 
+     1 letter: position in the alphabet in # 
+     2 letters: 1st letter's position times 26 + 2nd letter
+     3 letters: 1st letter's position times 26 + 2nd letter's position times 26 + 3rd letter
+     and so forth.
+
+     / zza = (26 x 26) + (26 x 26) + 1 = 1353
+     /  bX = (26 x 2) + X
+
 and the two parts of the nominalization, the particle and the suffix (ҳой, including <-ко>) are labeled as PTCLPN₁ and PTCPLN₂. Below, in the English line, the meaning of the nominalized participle is inside ().
